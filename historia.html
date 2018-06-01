@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>História</title>
+		<link rel='stylesheet' href='css/font_awesome.css'>
+		<link rel='stylesheet prefetch' href='css/bootstrap.css'>
+    <link rel="shortcut icon" href="img/icone.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/historia.css">
+	</head>
+
+<body>
+
+  <!------MENU-------->
+  <nav class="dropdownmenu">
+  <ul class="list-auto">
+    <li><a  href="#" onclick="home()">Home</a></li>
+    <li><a  href="#" onclick="historia()">História</a></li>
+    <li><a  href="#" onclick="componentes()">Os três componentes</a>
+      <ul id="submenu">
+        <li><a href="#section1" onclick="componentes()">Sustentabilidade ambiental</a></li>
+        <li><a href="#section2" onclick="componentes()">Sustentabilidade económica</a></li>
+        <li><a href="#section3" onclick="componentes()">Sustentabilidade sócio-politica</a></li>
+      </ul>
+    </li>
+    <li><a href="#" onclick="sugestoes()">Sugestões</a></li>
+  </ul>
+  </nav>
+
+  <!---Estrutura do Site---->
+  <div class="structure" ng-app="app" ng-controller="HomeController">
+  
+
+<div class="timeline"></div>
+
+<div class="timeline">  
+   <div ng-repeat="date in dates track by $index" class="date date-{{$index}}">
+      <div class="goal_wrap goal_real_1" ng-show="goal_real_1_{{date}}">
+       <i class="fa fa-group" aria-hidden="true"></i>
+     </div>
+      <div class="goal_wrap goal_real_2" ng-show="goal_real_2_{{date}}">
+       <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+     </div>
+      <div class="goal_wrap goal_real_3" ng-show="goal_real_3_{{date}}">
+       <i class="fa fa-book" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_4" ng-show="goal_real_4_{{date}}">
+       <i class="fa fa-bookmark" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_5" ng-show="goal_real_5_{{date}}">
+       <i class="fa fa-list-alt" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_6" ng-show="goal_real_6_{{date}}">
+       <i class="fa fa-list" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_7" ng-show="goal_real_7_{{date}}">
+       <i class="fa fa-pause" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_8" ng-show="goal_real_8_{{date}}">
+       <i class="fa fa-play" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_9" ng-show="goal_real_9_{{date}}">
+       <i class="fa fa-square-o" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_10" ng-show="goal_real_10_{{date}}">
+       <i class="fa fa-star" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_11" ng-show="goal_real_11_{{date}}">
+       <i class="fa fa-navicon" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_12" ng-show="goal_real_12_{{date}}">
+       <i class="fa fa-tree" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_13" ng-show="goal_real_13_{{date}}">
+       <i class="fa fa-flash" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_14" ng-show="goal_real_14_{{date}}">
+       <i class="fa fa-leaf" aria-hidden="true"></i>
+     </div>
+	 <div class="goal_wrap goal_real_15" ng-show="goal_real_15_{{date}}">
+       <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+     </div>
+    <p class="focus">
+      {{date}}
+    </p>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="titulo" id="campo">
+      </div>
+	  <div class="texto" id="campo1">
+	  </div>
+    </div>
+  </div>
+</div>
+  <script src='js/jquery-2.js'></script>
+<script src='js/TweenMax.js'></script>
+<script src='js/angular.js'></script>
+<script src="js/historia.js"></script>
+<script src="js/fastclick.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/fixed-responsive-nav.js"></script>
+<script type="text/javascript">
+  function home(){
+    window.location.href = "index.html";
+  };
+  function historia(){
+    window.location.href = "historia.html";
+  };
+  function componentes(){
+    window.location.href = "componentes.html";
+  };
+  function sugestoes(){
+    window.location.href = "sugestoes.html";
+  };
+</script>
+</body>
+</html>
